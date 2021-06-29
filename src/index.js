@@ -30,6 +30,11 @@ const counter = (state = 0, action) => {
   }
 };
 
+let store = createStore(counter);
+
+//Display the store on the console
+store.subscribe(() => console.log(store.getState()));
+
 //DISPATCH
 
 ReactDOM.render(
