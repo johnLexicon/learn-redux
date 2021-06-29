@@ -1,7 +1,22 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { increment } from './actions';
+
 function App() {
   const counter = useSelector((state) => state.counter);
-  return <div className="App">The count is {counter}</div>;
+  const dispatch = useDispatch();
+  return (
+    <div className="App">
+      <h1>Count {counter}</h1>
+      <button
+        onClick={() => {
+          dispatch(increment());
+        }}
+      >
+        +
+      </button>
+      <button>-</button>
+    </div>
+  );
 }
 
 export default App;
