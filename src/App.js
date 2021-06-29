@@ -9,7 +9,7 @@ function App() {
       <h1>Count {counter}</h1>
       <button
         onClick={() => {
-          dispatch(increment());
+          dispatch(increment(5));
         }}
       >
         +
