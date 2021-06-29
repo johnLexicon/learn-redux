@@ -1,5 +1,7 @@
+import { useSelector } from 'react-redux';
 function App() {
-  return <div className="App"></div>;
+  const counter = useSelector((state) => state.counter);
+  return <div className="App">The count is {counter}</div>;
 }
 
 export default App;
