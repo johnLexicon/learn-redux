@@ -36,6 +36,7 @@ let store = createStore(counter);
 store.subscribe(() => console.log(store.getState()));
 
 //DISPATCH
+store.dispatch(increment());
 
 ReactDOM.render(
   <React.StrictMode>
