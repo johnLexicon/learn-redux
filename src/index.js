@@ -2,7 +2,25 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { createStore } from 'redux';
+
+//STORE -> GLOBALIZED STATE
+
+//ACTIONS -> AN ACTION IS A FUNCTION THAT RETURNS AN OBJECT
+const increment = () => {
+  return {
+    type: 'INCREMENT',
+  };
+};
+const decrement = () => {
+  return {
+    type: 'DECREMENT',
+  };
+};
+
+//REDUCER -> MODIFIES THE STORE UPON THE ACTION
+
+//DISPATCH
 
 ReactDOM.render(
   <React.StrictMode>
@@ -10,8 +28,3 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
